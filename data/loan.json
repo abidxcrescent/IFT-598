@@ -1,0 +1,38 @@
+[
+    {
+        "Id": 0,
+        "customerName": "Abid",
+        "phoneNumber": 8728885542,
+        "address": "DPV",
+        "loanAmount": 250,
+        "interest": 6,
+        "loanTermYears": 4,
+        "loanType": "Savings",
+        "description":"Laon",
+        "res": 0
+    },
+    {
+        "Id": 1,
+        "customerName": "Abid",
+        "phoneNumber": 8728885542,
+        "address": "DPV",
+        "loanAmount": 250,
+        "interest": 6,
+        "loanTermYears": 4,
+        "loanType": "Savings",
+        "description":"Laon",
+        "res": 0
+    },
+    {
+        "Id": 2,
+        "customerName": "Abid",
+        "phoneNumber": 8728885542,
+        "address": "DPV",
+        "loanAmount": 250,
+        "interest": 6,
+        "loanTermYears": 4,
+        "loanType": "Savings",
+        "description":"Laon",
+        "res": 0
+    }
+]
