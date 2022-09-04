@@ -7,15 +7,15 @@ const replaceTemplate = require('./modules/replaceTemplate');
 
 /// Read data from file
 // Template
-const tempCourse = fs.readFileSync(
-    `${__dirname}/data/data.json`,
+const tempLoans = fs.readFileSync(
+    `${__dirname}/data/loan.json`,
     'utf-8'
  );
 
  /////////////////////////////////
 // Template
-const templateHTMLCourse = fs.readFileSync(
-    `${__dirname}/template/templateCourse.html`,
+const templateHTMLLoan = fs.readFileSync(
+    `${__dirname}/template/templateLoan.html`,
     'utf-8'
   );
 
@@ -31,7 +31,7 @@ const templateHTMLCourse = fs.readFileSync(
 //     return output;
 // }
 
- const dataObj = JSON.parse(tempCourse);// string to JavaScript Object JSON
+ const dataObj = JSON.parse(tempLoans);// string to JavaScript Object JSON
 
 ////////////////////////////////
 //Create Server
@@ -48,13 +48,13 @@ const server = httpServer.createServer( (req, res) =>{// call back function
             res.writeHead(200, {// Every thing ran successfully
                 'Content-type': 'text/html'
             });
-            const course = dataObj[Number(query.id)];// convert string to numeric value
-            const strCourseName = JSON.stringify(course);
-            const courseHTML = replaceTemplate(templateHTMLCourse, course);// function that will replace the course values in the HTML
+            const loan = dataObj[Number(query.id)];// convert string to numeric value
+            const strCourseName = JSON.stringify(loan);
+            const loanHTML = replaceTemplate(templateHTMLLoan, loan);// function that will replace the course values in the HTML
             //   res.end(` We received our first request from the client at resource ${urlParameter.pathname.toLowerCase()} with query parameter ${urlParameter.query.id}
             //   ${JSON.stringify(course)}// convert object back to string
             //   `)
-            res.end(courseHTML);
+            res.end(loanHTML);
         }
     }
     else{
@@ -66,7 +66,7 @@ const server = httpServer.createServer( (req, res) =>{// call back function
     });
 
 //Start Listening to requests
-server.listen(8000, 'localhost', ()=> {
-    console.log('Listening to requests on port 8000');
+server.listen(9000, 'localhost', ()=> {
+    console.log('Listening to requests on port 9000');
 });
 
